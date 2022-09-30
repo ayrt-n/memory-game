@@ -1,0 +1,41 @@
+.Card {
+  height: 100px;
+  width: 100px;
+  margin-right: 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
+
+.Card.red {
+  background-color: red;
+}
+
+.Card.blue {
+  background-color: blue;
+}
+
+.Card.green {
+  background-color: green;
+}
+
+.Card.purple {
+  background-color: purple;
+}
+
+.Card.yellow {
+  background-color: yellow;
+}
+
+.Card.orange {
+  background-color: orange;
+}
+
+.Card.teal {
+  background-color: teal;
+}
+
+.Card.grey {
+  background-color: grey;
+}
