@@ -1,0 +1,7 @@
+.Game {
+  margin-top: -15px;
+  margin-right: -15px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+}
