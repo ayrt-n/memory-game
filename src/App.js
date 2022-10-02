@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Game from './components/Game';
 import Scoreboard from './components/Scoreboard';
+import './styles/App.css';
 
 function App() {
   const [score, setScore] = useState(0);
@@ -14,8 +15,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Memory Game!</h1>
-      <p>
+      <h1 className="App-header">Memory Game!</h1>
+      <p className="App-instructions">
         Instructions: Click a card and keep track of which colors you have already selected.
         Don&#39;t click the same color twice or game over. If you have clicked all colors once,
         the game will reset and keep going!
