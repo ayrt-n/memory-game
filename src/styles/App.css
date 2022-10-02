@@ -1,0 +1,17 @@
+.App {
+  padding: 2rem;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.App-header {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.App-instructions {
+  margin-bottom: 1.5rem;
+}

@@ -1,0 +1,9 @@
+.Scoreboard-descriptor {
+  text-align: start;
+  font-weight: 600;
+}
+
+.Scoreboard-score {
+  min-width: 50px;
+  text-align: end;
+}
