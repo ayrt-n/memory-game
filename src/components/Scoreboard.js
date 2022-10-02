@@ -4,16 +4,18 @@ import '../styles/Scoreboard.css';
 
 function Scoreboard({ score, highscore }) {
   return (
-    <div className="Scoreboard">
-      <div>
-        Score:
-        {score}
-      </div>
-      <div>
-        High Score:
-        {highscore}
-      </div>
-    </div>
+    <table className="Scoreboard">
+      <tbody>
+        <tr>
+          <th className="Scoreboard-descriptor">Score</th>
+          <td className="Scoreboard-score">{score}</td>
+        </tr>
+        <tr>
+          <th className="Scoreboard-descriptor">High Score</th>
+          <td className="Scoreboard-score">{highscore}</td>
+        </tr>
+      </tbody>
+    </table>
   );
 }
 
