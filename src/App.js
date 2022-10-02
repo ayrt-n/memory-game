@@ -14,6 +14,12 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Memory Game!</h1>
+      <p>
+        Instructions: Click a card and keep track of which colors you have already selected.
+        Don&#39;t click the same color twice or game over. If you have clicked all colors once,
+        the game will reset and keep going!
+      </p>
       <Game
         incrementScore={() => setScore(score + 1)}
         resetScore={() => setScore(0)}
