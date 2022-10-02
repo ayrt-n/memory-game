@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import Card from './Card';
 import shuffle from '../helpers/shuffle';
 import '../styles/Game.css';
 
-function Game(props) {
+function Game({ incrementScore, resetScore }) {
   const [cards, setCards] = useState([
     'red',
     'blue',
@@ -27,15 +28,13 @@ function Game(props) {
       if (!card) { return; }
 
       if (clickedCards.includes(card.id)) {
-        // Game over!!! Reset score and game
         setClickedCards([]);
         setCards(shuffle(cards));
-        console.log('Bad');
+        resetScore();
       } else {
         setClickedCards(clickedCards.concat(card.id));
         setCards(shuffle(cards));
-        console.log('Good');
-        // Update score
+        incrementScore();
       }
     };
 
@@ -52,5 +51,10 @@ function Game(props) {
     </div>
   );
 }
+
+Game.propTypes = {
+  incrementScore: PropTypes.func.isRequired,
+  resetScore: PropTypes.func.isRequired,
+};
 
 export default Game;
