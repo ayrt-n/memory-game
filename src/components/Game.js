@@ -42,11 +42,6 @@ function Game({ incrementScore, resetScore }) {
         setClickedCards(clickedCards.concat(card.id));
         setCards(shuffle(cards));
         incrementScore();
-
-        // If all cards have been selected reset!
-        if (clickedCards.length === cards.length) {
-          setClickedCards([]);
-        }
       }
     };
 
@@ -56,6 +51,11 @@ function Game({ incrementScore, resetScore }) {
       document.getElementById('game-container').removeEventListener('click', advanceGameOnClick);
     };
   });
+
+  // If all cards have been clicked, reset the clicked cards tracking array
+  useEffect(() => {
+    if (clickedCards.length === cards.length) { setClickedCards([]); }
+  }, [clickedCards]);
 
   return (
     <div className="Game" id="game-container">
