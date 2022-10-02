@@ -14,10 +14,15 @@ function Game({ incrementScore, resetScore }) {
     'orange',
     'teal',
     'grey',
+    'black',
+    'blueviolet',
+    'brown',
+    'yellowgreen',
   ]);
 
   const [clickedCards, setClickedCards] = useState([]);
 
+  // Initial shuffle and display of cards on mount
   useEffect(() => {
     setCards(shuffle(cards));
   }, []);
@@ -28,13 +33,20 @@ function Game({ incrementScore, resetScore }) {
       if (!card) { return; }
 
       if (clickedCards.includes(card.id)) {
+        // Reset clicked cards array, shuffle cards, and reset the score
         setClickedCards([]);
         setCards(shuffle(cards));
         resetScore();
       } else {
+        // Add clicked card to clicked cards array, shuffle cards, and increment score
         setClickedCards(clickedCards.concat(card.id));
         setCards(shuffle(cards));
         incrementScore();
+
+        // If all cards have been selected reset!
+        if (clickedCards.length === cards.length) {
+          setClickedCards([]);
+        }
       }
     };
 
